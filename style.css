@@ -4,6 +4,10 @@
     font-family: "Roboto";
 }
 
+header {
+    margin-bottom: 40px;
+}
+
 .header-wrapper {
     background-color: #ededed;
 }
@@ -19,6 +23,12 @@
 .container {
     max-width: 1280px;
     margin: auto;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
 }
 
 .header-container nav ul {
@@ -85,7 +95,7 @@ aside {
 }
 
 .aside-container {
-    margin-top: 40px;
+    width: 280px;
     box-shadow: 5px 8.66px 10px rgba(0,0,0,0.1);
     background-color: #ffffff;
     padding-bottom: 35px;
@@ -176,5 +186,26 @@ aside {
 
 .research-date {
     color: #8c8c8c;
+    font-weight: 300;
+}
+
+.welcome-section {
+    background-image: url('images/background.png');
+    height: 300px;
+    background-position-y: 54%;
+    background-position-x: 90%;
+}
+
+.welcome-section h1 {
+    margin: 70px 40px 25px 40px;
+    font-size: 40px;
+    font-weight: 900;
+    max-width: 390px;
+}
+
+.welcome-text {
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
     font-weight: 300;
 }
