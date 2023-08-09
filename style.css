@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+.header-wrapper {
+    background-color: #ededed;
+}
+
+.header-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    height: 40px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.header-container nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.header-container nav ul a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: 300;
+}
+
+.header-container nav ul a:hover {
+    color: #d34b49;
+}
+
+.header-container img {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.man {
+    width: 150px;
+}
+.logo-user-wrapper {
+    box-shadow: 2.5px 4.33px 10px rgba(0,0,0,0.1);
+}
+
+.logo-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    height: 90px;
+}
+
+.username {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: right;
+    cursor: pointer;
+}
