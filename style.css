@@ -85,7 +85,7 @@ header {
 }
 
 main {
-    background-color: #ffffff;
+   background: #ffffff;
 }
 
 aside {
@@ -99,7 +99,6 @@ aside {
     width: 280px;
     box-shadow: 5px 8.66px 10px rgba(0,0,0,0.1);
     background-color: #ffffff;
-    
 }
 
 .filter-container {
@@ -281,6 +280,18 @@ aside {
     ". . picture";
     align-items: center;
     gap: 40px 30px;
+
+    .no-blur {
+        background-position-y: 25%;
+        top: 60px;
+        height:30px;
+        width: 100%;
+    }
+
+    .picture-number {
+        top: 30px;
+        left: 52px;
+    }
 }
 
 .intruction-step:nth-child(even) {
@@ -293,6 +304,19 @@ aside {
     "picture . . ";
     align-items: center;
     gap: 40px 30px;
+
+    .no-blur {
+        background-position-x: 99%;
+        right: 0px;
+        height: 100%;
+        width: 30px;
+    }
+
+    .picture-number {
+        top: 60px;
+        right: 28px;
+    }
+
 }
 
 .intruction-step h2 {
@@ -310,9 +334,7 @@ aside {
     font-size: 120px;
     letter-spacing: -5px;
     line-height: 36px;
-    color: #000000;
     font-weight: 900;
-    font-family: "Roboto";
 }
 
 .step-name {
@@ -331,10 +353,41 @@ aside {
 }
 
 .step-picture {
+    position: relative;
     grid-area: picture;
+    width: 480px;
+    height: 274px;
+    overflow: hidden;
 }
 
-.intruction-step:nth-child(odd) {
-    display: grid;
+.step-img {
+    background-image: url('images/instruction.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(1px);
 }
 
+.no-blur {
+    position: absolute;
+    background-image: url('images/instruction.png');
+    background-size: cover;
+    z-index: 0;
+}
+
+.picture-number {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 5px 8.66px 10px rgba(0,0,0,0.1);
+    background-color: #e53d3d;
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    z-index: 1;
+}
