@@ -25,9 +25,10 @@ header {
     margin: auto;
 }
 
-.main-container {
+.content-container {
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: top;
     gap: 40px;
 }
 
@@ -61,9 +62,6 @@ header {
     cursor: pointer;
 }
 
-.man {
-    width: 150px;
-}
 .logo-user-wrapper {
     box-shadow: 2.5px 4.33px 10px rgba(0,0,0,0.1);
 }
@@ -92,14 +90,16 @@ main {
 
 aside {
     max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .aside-container {
     width: 280px;
     box-shadow: 5px 8.66px 10px rgba(0,0,0,0.1);
     background-color: #ffffff;
-    padding-bottom: 35px;
-    margin-bottom: 40px;
+    
 }
 
 .filter-container {
@@ -147,6 +147,10 @@ aside {
     justify-content: space-between;
 }
 
+.button-wrapper {
+    padding-bottom: 35px;
+}
+
 .filter-button {
     display: flex;
     justify-content: space-evenly;
@@ -164,6 +168,10 @@ aside {
 
 .filter-button:hover {
     background-color: #6fa26d;
+}
+
+.research {
+    padding-bottom: 20px;
 }
 
 .research-list {
@@ -189,6 +197,19 @@ aside {
     font-weight: 300;
 }
 
+.main-container {
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main-container h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
 .welcome-section {
     background-image: url('images/background.png');
     height: 300px;
@@ -208,4 +229,44 @@ aside {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
+}
+
+.posibilities-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px 40px;
+    list-style: none;
+}
+
+.posibilities-list li {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.posibilities-list p {
+    width: 280px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.image-posibilities-wrapper {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posibilities-list li:nth-child(1), .posibilities-list li:nth-child(4) {
+    .image-posibilities-wrapper {
+        background-color: #7cb47a;
+    }
+}
+
+.posibilities-list li:nth-child(2), .posibilities-list li:nth-child(3) {
+    .image-posibilities-wrapper {
+        background-color: #ededed;
+    }
 }
