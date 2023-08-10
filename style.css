@@ -391,3 +391,23 @@ aside {
     text-align: center;
     z-index: 1;
 }
+
+footer {
+    background-color: #7cb47a;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
