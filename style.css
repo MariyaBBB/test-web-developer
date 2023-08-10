@@ -205,7 +205,6 @@ aside {
 }
 
 .main-container h2 {
-    margin-bottom: 35px;
     font-size: 30px;
     font-weight: 900;
 }
@@ -236,6 +235,7 @@ aside {
     grid-template-columns: auto 1fr;
     gap: 40px 40px;
     list-style: none;
+    margin-top: 35px;
 }
 
 .posibilities-list li {
@@ -270,3 +270,71 @@ aside {
         background-color: #ededed;
     }
 }
+
+.intruction-step:nth-child(odd) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header picture"
+    "number discription picture"
+    ". . picture";
+    align-items: center;
+    gap: 40px 30px;
+}
+
+.intruction-step:nth-child(even) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "picture . ."
+    "picture number discription "
+    "picture . . ";
+    align-items: center;
+    gap: 40px 30px;
+}
+
+.intruction-step h2 {
+    grid-area: header;
+    margin-top: 30px;
+}
+
+.intruction-step {
+    margin-bottom: 20px;
+}
+
+.step-number {
+    grid-area: number;
+    opacity: 0.102;
+    font-size: 120px;
+    letter-spacing: -5px;
+    line-height: 36px;
+    color: #000000;
+    font-weight: 900;
+    font-family: "Roboto";
+}
+
+.step-name {
+    grid-area: name;
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.step-discription {
+    grid-area: discription;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.step-picture {
+    grid-area: picture;
+}
+
+.intruction-step:nth-child(odd) {
+    display: grid;
+}
+
