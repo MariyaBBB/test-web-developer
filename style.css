@@ -84,10 +84,6 @@ header {
     cursor: pointer;
 }
 
-main {
-   background: #ffffff;
-}
-
 aside {
     max-width: 280px;
     display: flex;
@@ -289,7 +285,7 @@ aside {
     }
 
     .picture-number {
-        top: 30px;
+        top: 28px;
         left: 52px;
     }
 }
@@ -314,7 +310,7 @@ aside {
 
     .picture-number {
         top: 60px;
-        right: 28px;
+        right: 32px;
     }
 
 }
@@ -368,6 +364,7 @@ aside {
     right: 0;
     bottom: 0;
     filter: blur(1px);
+    z-index: -1;
 }
 
 .no-blur {
@@ -390,6 +387,115 @@ aside {
     font-weight: 900;
     text-align: center;
     z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    opacity:0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal.open{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 500px;
+    font-size: 16px;
+}
+
+.modal-header {
+    height: 50px;
+    padding: 0 30px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ededed;
+}
+
+.modal-container {
+    margin: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-form {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 428px;
+}
+
+.input-box input {
+    width: 100%;
+    font-size: 16px;
+    height: 35px;
+    padding: 0 0 0 10px;
+    margin-top: 10px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+}
+
+.password-control {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.password-control.view {
+    background-image: url('images/view.svg');
+}
+
+
+.password-control.no-view {
+    background-image: url('images/no-view.svg');
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-button {
+    padding: 8px 2px;
+    border: none;
+    width: 150px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-button {
+    background-color: #bdbdbd;
+}
+
+.save-button {
+    background-color: #7cb47a;
 }
 
 footer {

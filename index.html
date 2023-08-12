@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/imask"></script>
     </head>
     <body>
         <header>
@@ -21,7 +22,7 @@
                         </nav>
                         <nav>
                             <ul>
-                                <li><a href="#"><img src="images/user.svg" alt="user">Личные данные</a></li>
+                                <li><a href="#modal" class="modal-link"><img src="images/user.svg" alt="user">Личные данные</a></li>
                                 <li><a href="#"><img src="images/exit.svg" alt="exit">Выход</a></li>
                             </ul>
                         </nav>
@@ -167,6 +168,59 @@
                 </div>
             </main>       
         </div>
+        <div id="modal" class="modal">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span> Личные данные </span>
+                    </div>
+                    <div class="modal-container">
+                        <form action="#" class="modal-form">
+                            <div class="input-box">
+                                <label>ФИО</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-box">
+                                <label>Телефон</label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div class="input-box">
+                                <label>Почта</label>
+                                <input type="text">
+                            </div>
+                            <div class="input-box">
+                                <label for="password">Пароль</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    placeholder="Введите пароль"
+                                >
+                                <a href="#" class="password-control view"></a>
+                            </div>
+                            <div class="input-box">
+                                <label>Подтверждение пароля</label>
+                                <input 
+                                    type="password" 
+                                    id="password"
+                                >
+                                <a href="#" class="password-control view"></a>
+                            </div>
+                            <div class="modal-buttons">
+                                <input 
+                                    type="button" 
+                                    class="modal-close close-modal modal-button close-button" 
+                                    value="Закрыть"
+                                >
+                                <input 
+                                    type="button" 
+                                    class="modal-button save-button"
+                                    value="Сохранить">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="container footer-container">
                 <div>
@@ -175,5 +229,15 @@
                 <div><a href="#">На верх &uarr;</a></div>
             </div>
         </footer>
+        <script src="js/modal.js"></script>
+        <script src="js/show-close-password.js"></script>
     </body>
 </html>
+<script>
+    const element = document.getElementById('phone');
+    const maskOptions = {
+        mask: '+7(000)000-00-00',
+        lazy: false
+    };
+    const mask = IMask(element, maskOptions);
+</script>
