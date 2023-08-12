@@ -1,5 +1,5 @@
 const passwordControls = document.querySelectorAll('.password-control');
-const passwordInputs = document.querySelectorAll('#password');
+const passwordInputs = document.querySelectorAll('.password');
 
 for(let index = 0; index < passwordControls.length; index++) {
     const passwordControl = passwordControls[index];

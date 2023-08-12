@@ -189,10 +189,10 @@
                                 <input type="text">
                             </div>
                             <div class="input-box">
-                                <label for="password">Пароль</label>
+                                <label>Пароль</label>
                                 <input 
                                     type="password" 
-                                    id="password" 
+                                    class="password" 
                                     placeholder="Введите пароль"
                                 >
                                 <a href="#" class="password-control view"></a>
@@ -201,7 +201,8 @@
                                 <label>Подтверждение пароля</label>
                                 <input 
                                     type="password" 
-                                    id="password"
+                                    class="password"
+                                    placeholder="Подтверждение пароля"
                                 >
                                 <a href="#" class="password-control view"></a>
                             </div>
@@ -231,13 +232,13 @@
         </footer>
         <script src="js/modal.js"></script>
         <script src="js/show-close-password.js"></script>
+        <script>
+            const element = document.getElementById('phone');
+            const maskOptions = {
+                mask: '+7(000)000-00-00',
+                lazy: false
+            };
+            const mask = IMask(element, maskOptions);
+        </script>
     </body>
 </html>
-<script>
-    const element = document.getElementById('phone');
-    const maskOptions = {
-        mask: '+7(000)000-00-00',
-        lazy: false
-    };
-    const mask = IMask(element, maskOptions);
-</script>
