@@ -438,7 +438,6 @@ aside {
 .modal-form {
     display: grid;
     gap: 20px;
-    margin-bottom: 20px;
 }
 
 .input-box {
@@ -454,8 +453,11 @@ aside {
     margin-top: 10px;
     font-weight: 300;
     outline: none;
-    border: 1px solid #bdbdbd;
     border-radius: 4px;
+}
+
+.password, input#name, input#phone, input#email {
+    border: 1px solid #bdbdbd;
 }
 
 .password-control {
@@ -465,6 +467,15 @@ aside {
     background-size: cover;
     width: 20px;
     height: 20px;
+}
+
+.no-match-password {
+    border: 1px solid red;
+}
+
+.message-no-match-passwords {
+    color: red;
+    display: none;
 }
 
 .password-control.view {
@@ -489,13 +500,34 @@ aside {
     cursor: pointer;
     font-size: 16px;
 }
-
+.hidden-modal {
+    display: none;
+}
 .close-button {
-    background-color: #bdbdbd;
+    background-color: #b3b3b3;
+}
+
+.close-button:hover {
+    background-color: #a9a9a9;
 }
 
 .save-button {
     background-color: #7cb47a;
+}
+
+.save-button:hover {
+    background-color: #6fa26d;
+}
+
+.modal-message {
+    display: none;
+}
+
+.modal-message.open {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 footer {

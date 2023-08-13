@@ -175,10 +175,10 @@
                         <span> Личные данные </span>
                     </div>
                     <div class="modal-container">
-                        <form action="#" class="modal-form">
+                        <form action="#" id="modal-form" class="modal-form">
                             <div class="input-box">
                                 <label>ФИО</label>
-                                <input type="text">
+                                <input type="text" id="name">
                             </div>
                             <div class="input-box">
                                 <label>Телефон</label>
@@ -186,7 +186,7 @@
                             </div>
                             <div class="input-box">
                                 <label>Почта</label>
-                                <input type="text">
+                                <input type="text"  id="email">
                             </div>
                             <div class="input-box">
                                 <label>Пароль</label>
@@ -206,6 +206,9 @@
                                 >
                                 <a href="#" class="password-control view"></a>
                             </div>
+                            <div class="message-no-match-passwords">
+                                <p>Пароли не совпадают!</p>
+                            </div>
                             <div class="modal-buttons">
                                 <input 
                                     type="button" 
@@ -218,6 +221,14 @@
                                     value="Сохранить">
                             </div>
                         </form>
+                        <div class="modal-message">
+                            <p>Спасибо за ваше обращение!</p>
+                            <input 
+                                    type="button" 
+                                    class="modal-close close-modal modal-button close-button" 
+                                    value="Закрыть"
+                                >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -231,7 +242,6 @@
             </div>
         </footer>
         <script src="js/modal.js"></script>
-        <script src="js/show-close-password.js"></script>
         <script>
             const element = document.getElementById('phone');
             const maskOptions = {
